@@ -1,0 +1,60 @@
+<!-- Alex McLeod - amcl287 - HTML page for the index -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Connect IV - Alex McLeod</title>
+    <script
+      type="text/javascript"
+      src="/eel.js"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="/script.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Connect IV</h1>
+    </header>
+    <div class="main-menu">
+      <div class="size-selector-container">
+        <label
+          for="size-selector"
+          class="size-selector-label"
+          >Board Size:</label
+        >
+        <input
+          type="number"
+          name="size-selector"
+          class="size-selector-input"
+        />
+      </div>
+      <div class="play-button-container">
+        <button
+          class="play-button"
+          onclick="startGame()"
+        >
+          Play
+        </button>
+      </div>
+    </div>
+    <script>
+      document.querySelector('.size-selector-input').focus();
+    </script>
+  </body>
+</html>

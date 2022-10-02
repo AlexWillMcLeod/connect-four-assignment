@@ -1,0 +1,120 @@
+/* 
+  Alex McLeod - amcl287
+  CSS Styling file for the index page
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Product Sans';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0 0.5em #ddd;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  position: sticky;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.main-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0.5em #ddd;
+  padding: 3rem;
+  border-radius: 1rem;
+  position: sticky;
+  gap: 2rem;
+}
+
+.size-selector-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.size-selector-label {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.size-selector-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 0.5em #ddd;
+  border: #999 solid;
+}
+
+.play-button-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  width: fit-content;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #a1f2bd; /* fallback for old browsers */
+  box-shadow: 0 0 0.5em #a1f2bd;
+}
+
+.play-button:active {
+  background: #95e3b0; /* fallback for old browsers */
+  box-shadow: 0 0 1em #95e3b0;
+}
+
+.error-snackbox {
+  background-color: rgb(255, 87, 112);
+  width: fit-content;
+  float: left;
+  margin-top: auto;
+  padding: 0.7rem;
+  border-radius: 0.6rem;
+  font-size: 1.2rem;
+  transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: 0 0 0.5em red;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(1deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
