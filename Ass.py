@@ -1,3 +1,9 @@
+# Alex McLeod - amcl287
+# Main source file for connect four game
+
+# Use FourInARow(board_size).play() where board_size is the width and height of the board 
+# to start a game against a computer. Play until board is full, whoever gets the most 4-in-a-rows wins
+
 class GameBoard:
 
   def __init__(self, size):
@@ -194,5 +200,3 @@ class FourInARow:
       print("Player 2 (crosses) wins!")
     else:
       print("It's a draw!")
-
-FourInARow(6).play()

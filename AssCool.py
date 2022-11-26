@@ -1,5 +1,8 @@
 # Alex McLeod - amcl287
 
+# Extended version of the Ass.py connect 4 game with a GUI made with html, css and js (source code in the ./web folder).
+# Just run this file and it will open
+
 import eel
 
 class GameBoard:
@@ -101,7 +104,7 @@ class GameBoard:
     if usr_points > opp_points: # If blocking the user stops them getting more points than you can gain
       self.add(usr_col, 2)
     else:
-      self.add(opp_col, 2)
+      self.add(opp_col, 2) 
 
   # Gets the number of free positions in a column
   def num_free_positions_in_column(self, column):
@@ -183,8 +186,8 @@ def create_board():
 @eel.expose
 def add_to_column(col):
   global game
-  if game.board.num_free_positions_in_column(col) == 0:
-    return
+  if game.board.game_over(): return
+  if game.board.num_free_positions_in_column(col) == 0: return
   game.board.add(col, 1)
   game.board.opponent_add()
   
